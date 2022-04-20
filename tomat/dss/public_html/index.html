@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--CSS-->
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/style.css" rel="stylesheet" type="text/css"/>
+
+        <!--javascript-->
+        <script src="resources/js/angular.js" type="text/javascript"></script>
+        <script src="resources/js/angular.min.js" type="text/javascript"></script>
+        <script src="app.js" type="text/javascript"></script>
+    </head>
+    <body ng-app="dssApp">
+        <!-- MAIN WEBSITE BEGIN -->
+        <div id="main">
+            <!-- HEADER WEBSITE BEGIN -->
+            <div id="header">
+                <!-- LOGO WEBSITE -->
+                <div id="logo">
+                    <h1>DSS Bercocok Tanam dengan Tomat</h1>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!-- TOP MENU WEBSITE BEGIN -->
+            <div id="top-menu-website">
+                <div class="left-side" style="margin-top: 48px;"></div>
+                <div class="middle-side">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="right-side"></div>
+                <div class="clear"></div>
+            </div>
+            <div id="content">
+
+                <!-- LEFT CONTENT WEBSITE BEGIN -->
+                <div id="left-content">
+
+                    <div ng-controller="dssCtrl">
+                        <h3>Ukuran Tanah</h3>
+                        <p>Lebar (cm) :     <input type="number" ng-model="val.lebar" name="lebar"> </p>
+                        <p>Panjang (cm) : <input type="number" ng-model="val.panjang" name="panjang"></p>
+
+                        <!--{{val.lebar}}+{{val.panjang}}={{hasil()}} <br>-->
+                        <hr>
+                        <h3>Penanaman</h3><input type="checkbox" name="x" ng-model="x"> Edit ukuran penanaman
+                        <div ng-if="x" >
+                            <p>Jarak Lubang (cm) : <input type="number" ng-model="tanam.jaraklubang" name="jaraklubang"></p>
+                            <p>Jarak Lajur (cm) : <input type="number" ng-model="tanam.jaraklajur" name="jaraklajur"></p>
+                            <hr>
+                        </div>
+                        <p>Jumlah Lajur : {{nilaiTanamLajur()}} Lajur</p>
+                        <p>1 lajur berjumlah {{nilaiTanamLubang()}} Lubang</p>
+                        <p>Total Lubang yg dibuat berjumlah {{totalLubang()}} Lubang</p>
+                        <hr>
+                        <h3>Pemupukan</h3><input type="checkbox" name="y" ng-model="y"> Edit jumlah pupuk
+                        <div ng-if="y" >
+                            <p>Dosis per pohon (gram) : <input type="number" ng-model="pupuk.dosis" name="dosis"></p>
+                            <p>Jumlah pemberian pupuk : <input type="number" ng-model="pupuk.beri" name="beri"></p>
+                            <p>Harga pupuk per gram (Rp) : <input type="number" ng-model="pupuk.harga" name="harga"></p>
+                            <hr>
+                        </div>
+                        <p>sekali pemupukan : {{dosisTanaman()}} gram</p>
+                        <p>Harga pupuk : Rp. {{hargaDosisTanaman()}}</p>
+                        <hr>
+                        <h3>Hasil Pohon</h3><input type="checkbox" name="z" ng-model="z"> Edit hasil tipa pohon
+                        <div ng-if="z" >
+                            <p>Jumlah buah per pohon (buah): <input type="number" ng-model="pohon.buah" name="buah"></p>
+                            <p>Berat buah per pohon (kg): <input type="number" ng-model="pohon.berat" name="berat"></p>
+                            <hr>
+                        </div>
+                        <p>Total buah : {{jumlahBuahPerPohon()}} buah</p>
+                        <p>Total berat : {{beratBuahPerPohon()}} Kg</p>
+                        <hr>
+                        <h3>Hasil </h3>
+                        <p>Total : {{hargaJual()}} </p>
+                        <p>Real : {{hargaBersih()}} </p>
+
+                    </div>
+                </div>
+
+                <!-- END OF LEFT CONTENT WEBSITE -->
+
+                <!-- RIGHT CONTENT WEBSITE BEGIN -->
+                <div id="right-content">
+                    <div class="top-right-panel">...</div>
+                    <div class="bottom-right-panel">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <!-- FOOTER WEBSITE BEGIN -->
+            <div id="footer">
+                <div class="content-footer">
+                    <div class="left-footer"></div>
+                    <div class="middle-footer">
+                        &copy; Copyright by Argajaladri. All right reserved.
+                    </div>
+                    <div class="right-footer"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>

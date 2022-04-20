@@ -1,0 +1,41 @@
+{
+    "bedeng": [
+        {
+            "tinggi": 30,
+            "lebar": 100,
+            "jarak": 35
+        }
+    ],
+    "tanam": [
+        {
+            "lubang": 6,
+            "jaraklubang": 45,
+            "jaraklajur": 75,
+            "lajur": 2
+        }
+    ],
+    "pohon": [
+        {
+            "buah": 5,
+            "panen": 3,
+            "berat": 1.2
+
+        }
+    ],
+    "pupuk": [
+        {
+            "dosis": 2,
+            "beri": 1,
+            "harga" : 150
+        }
+    ],
+    "harga": [
+        {
+            "berat": 1,
+            "jumlah": 4,
+            "uang": 4500
+        }
+    ]
+
+
+}
